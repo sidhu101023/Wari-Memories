@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Wari Memories</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+    <div class="logo" id="logo">
+        🙏 <span>Wari Memories</span>
+    </div>
+
+    <div class="nav-links">
+
+        <button class="nav-item active" data-section="home">
+            Home
+        </button>
+
+        <button class="nav-item" data-section="about">
+            About
+        </button>
+
+        <button class="nav-item" data-section="memories">
+            My Memories
+        </button>
+
+    </div>
+
+</nav>
+
+
+    <main>
+
+        <!-- HERO -->
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <p class="tagline">
+                    PRESERVE • RELIVE • REMEMBER
+                </p>
+
+                <h1>
+                    Find Your<br>
+                    <span>Wari Memories</span>
+                </h1>
+
+                <p class="description">
+
+                    Upload a selfie and let AI find
+                    your unforgettable moments
+                    from the Pandharpur Wari.
+
+                </p>
+
+                <div class="upload-box">
+
+                    <div class="upload-icon">
+                        📸
+                    </div>
+
+                    <h3>
+                        Upload Your Selfie
+                    </h3>
+
+                    <p>
+                        Choose a clear photo of yourself
+                    </p>
+
+                    <input
+                        type="file"
+                        id="selfieInput"
+                        accept="image/*"
+                        hidden
+                    >
+
+                    <button
+                        class="upload-button"
+                        onclick="document.getElementById('selfieInput').click()">
+
+                        Choose Selfie
+
+                    </button>
+
+                    <p id="fileName"></p>
+
+                </div>
+
+
+                <button
+                    class="search-button"
+                    id="searchButton">
+
+                    🔍 Find My Memories
+
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- ABOUT -->
+
+<section
+    class="about-section"
+    id="aboutSection">
+
+    <div class="about-content">
+
+        <p class="tagline">
+            ABOUT WARI MEMORIES
+        </p>
+
+        <h2>
+            Every Journey Deserves
+            <span>to be Remembered.</span>
+        </h2>
+
+        <p>
+            Wari Memories is an AI-powered digital
+            archive designed to help Warkaris rediscover
+            their moments from the Pandharpur Wari.
+        </p>
+
+        <div class="about-cards">
+
+            <div class="about-card">
+                <div>🤖</div>
+                <h3>AI Powered</h3>
+                <p>
+                    Find your photographs using
+                    facial recognition.
+                </p>
+            </div>
+
+            <div class="about-card">
+                <div>📸</div>
+                <h3>Preserve Memories</h3>
+                <p>
+                    Keep precious Wari moments
+                    digitally preserved.
+                </p>
+            </div>
+
+            <div class="about-card">
+                <div>🙏</div>
+                <h3>For Warkaris</h3>
+                <p>
+                    Rediscover moments from
+                    your Wari journey.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+        <!-- LOADING -->
+
+        <section
+            class="loading-section"
+            id="loadingSection">
+
+            <div class="loader"></div>
+
+            <h2>
+                AI is searching your memories...
+            </h2>
+
+            <div class="steps">
+
+                <p>✓ Face detected</p>
+
+                <p>✓ Creating face embedding</p>
+
+                <p>✓ Searching Wari archive</p>
+
+                <p>✓ Matching memories</p>
+
+            </div>
+
+        </section>
+
+
+        <!-- RESULTS -->
+
+        <section
+            class="results-section"
+            id="resultsSection">
+
+            <div class="results-header">
+
+                <p class="tagline">
+                    YOUR JOURNEY • YOUR MEMORIES
+                </p>
+
+                <h2>
+                    Your Wari Memories
+                </h2>
+
+                <p id="resultCount"></p>
+
+            </div>
+
+            <div
+                class="memory-grid"
+                id="memoryGrid">
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
